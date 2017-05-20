@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="zxzq.xiaobai.dailynews.fragment.NewsListFragment">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:gravity="center_vertical"
+       android:orientation="horizontal"
+       android:paddingRight="10dp"
+       >
+
+      <zxzq.xiaobai.dailynews.view.HorizontalListView
+          android:id="@+id/hl"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1">
+
+      </zxzq.xiaobai.dailynews.view.HorizontalListView>
+
+      <ImageView
+          android:id="@+id/iv_moretype"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/drawable_moretype_selector"/>
+   </LinearLayout>
+
+   <zxzq.xiaobai.dailynews.view.xllistview.XListView
+       android:id="@+id/xl"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+   </zxzq.xiaobai.dailynews.view.xllistview.XListView>
+</LinearLayout>

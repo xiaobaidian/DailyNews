@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+<TextView
+    android:id="@+id/tv_deleteone"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:text="删除该新闻"
+    android:textSize="20sp"
+    android:gravity="center"
+    android:background="#CCCCCC"
+    />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"></View>
+    <TextView
+        android:id="@+id/tv_deleteall"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="清空收藏"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="#CCCCCC"
+        />
+</LinearLayout>

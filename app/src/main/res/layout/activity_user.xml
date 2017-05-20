@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_user"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="zxzq.xiaobai.dailynews.activity.UserActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/layout_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/center_top"
+                    android:layout_width="fill_parent"
+                    android:layout_height="130dp"
+                    android:background="@mipmap/center_top_bg">
+
+                    <FrameLayout
+                        android:id="@+id/icon_layout"
+                        android:layout_width="88.0dip"
+                        android:layout_height="88.0dip"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="20.0dip"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="10.0dip">
+
+                        <ImageView
+                            android:id="@+id/iv_photo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:src="@mipmap/biz_pc_main_info_profile_avatar_bg_dark"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/icon_layout"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/icon_layout"
+                        android:shadowColor="#a0a0a0a0"
+                        android:shadowDy="2.0"
+                        android:shadowRadius="1.0"
+                        android:text="登录名"
+
+                        android:textSize="25sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_integral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tv_name"
+                        android:layout_below="@+id/tv_name"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:text="积分:"
+                        android:textSize="20sp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    style="@style/global_columns_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginTop="40.0dip"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/account_phone_layout"
+                        style="@style/global_column_style">
+
+                        <TextView
+                            android:id="@+id/tv_commentNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="跟帖数统计："/>
+
+                        <TextView
+                            android:id="@+id/tv_comment_count"
+                            style="@style/global_catalog_style"
+                            android:layout_width="0.0dip"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_weight="1.0"
+                            android:text="11"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/acount_phone_line"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dip"
+                        android:background="@color/linearlayout_border"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="13.0dip">
+
+                        <TextView
+                            android:id="@+id/login_log"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="登陆日志"/>
+
+
+                        <ListView
+                            android:id="@+id/lv_loginLog"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:dividerHeight="2dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_exit"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:layout_weight="0"
+                android:background="@drawable/btn_red_selector"
+                android:text="退出登录"
+                android:textColor="#ffffffff"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

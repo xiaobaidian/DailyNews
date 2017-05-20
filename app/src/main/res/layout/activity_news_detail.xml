@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="zxzq.xiaobai.dailynews.activity.NewsDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#AA0000">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dp"/>
+        <!--
+         android:singleLine="true"  设置单行显示
+            android:marqueeRepeatLimit="marquee_forever" 设置滚动次数
+            android:ellipsize="marquee" 使内容具有滚动的效果
+            android:scrollHorizontally="true"设置水平方向滚动
+            android:focusable="true"获取到焦点
+            android:focusableInTouchMode="true"设置为可触摸的
+
+        -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:text="资讯详情"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/news_menu"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        ></ProgressBar>
+    <WebView
+        android:id="@+id/wb_newsdetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></WebView>
+</LinearLayout>
